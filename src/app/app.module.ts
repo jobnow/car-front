@@ -12,7 +12,7 @@ import { MessageService } from './message.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, VeiculosComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +21,7 @@ import { MessageService } from './message.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [MessageService],
+  providers: [MessageService, ErrorResponse],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

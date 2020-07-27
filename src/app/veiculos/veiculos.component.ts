@@ -3,32 +3,33 @@ import {Component, OnInit} from '@angular/core'
 import {Veiculo} from './veiculo'
 import {VeiculosService} from './veiculos.service'
 
-// @Component({
-//     selector: "app-veiculos",
-//     templateUrl: './veiculos.component.html',
-//     providers: [VeiculosService]
-// })
-// implements OnInit 
+@Component({
+    selector: "app-veiculos",
+    templateUrl: './veiculos.component.html',
+    providers: [VeiculosService]
+})
 
-export class VeiculosComponent{
+export class VeiculosComponent implements OnInit  {
     veiculos: Veiculo[]
     editVeiculo: Veiculo
 
     constructor(private veiculoService: VeiculosService) {}
 
 
-    // ngOnInit() {
-    //     this.getVeiculos()
-    // }
+    ngOnInit() {
+        this.getVeiculos()
+    }
 
     getVeiculos():void{
         this.veiculoService.getVeiculos().subscribe(veiculos => (this.veiculos = veiculos))
     }
 
-    add(marca: string): void{
+    add(nome: string, modelo: string, marca: string): void{
         this.editVeiculo = undefined
+        nome = nome.trim()
+        modelo = modelo.trim()
         marca = marca.trim()
-        if(!marca){
+        if(!nome){
             return
         }
 

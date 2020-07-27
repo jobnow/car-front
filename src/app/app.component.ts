@@ -1,12 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-
-import {VeiculosService} from './veiculos/veiculos.service'
-
-import {VeiculosComponent} from './veiculos/veiculos.component'
+import { Component } from '@angular/core';
 
 @Component({
   selector: "app-root",
-  templateUrl: './veiculos/veiculos.component.html',
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 
