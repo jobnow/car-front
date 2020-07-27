@@ -1,12 +1,3 @@
-<!-- <form class="form" (submit)="add(veiculoNome.value); veiculoNome.value=''">
-    
-    <div class="form-group">
-        <input #veiculoNome type="text" class="form-control" placeholder="Nome veiculo">
-    </div>
- 
-    <input type="submit" value="SUBMIT" class="btn btn-success btn-lg btn-block">
-</form> -->
-
 <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -26,6 +17,10 @@
         <td>{{veiculo.marca}}</td>
 
         <td class="text-right">
+            <a (click)="edit(veiculo)">
+                <!-- <span *ngIf="veiculo!==editVeiculo"></span> -->
+                <!-- <input *ngIf="veiculo===editVeiculo" [(ngModel)]="veiculo.marca" (blur)="update()" (keyup.enter)="update()"> -->
+            </a>
             <button class="btn btn-danger" (click)="delete(veiculo)">
                 Delete
             </button>
@@ -33,20 +28,3 @@
       </tr>
     </tbody>
   </table>
-
-<!-- <table class="table">
-    <tr >
-        <td class="text-left">
-            <a (click)="edit(veiculo)">
-                <span *ngIf="veiculo!==editVeiculo">{{veiculo.nome}}</span>
-                <input *ngIf="veiculo===editVeiculo" [(ngModel)]="veiculo.marca" (blur)="update()" (keyup.enter)="update()">
-            </a>
-        </td>
-
-
-    </tr>
-</table> -->
-
-<div class="card card-body bg-light text-center">
-    <span class="small">click on item to edit</span>
-</div>
