@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {VeiculosService} from './veiculos/veiculos.service'
+
 import {VeiculosComponent} from './veiculos/veiculos.component'
 
 @Component({

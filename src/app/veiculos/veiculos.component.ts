@@ -16,9 +16,10 @@ export class VeiculosComponent{
 
     constructor(private veiculoService: VeiculosService) {}
 
-    ngOnInit() {
-        this.getVeiculos()
-    }
+
+    // ngOnInit() {
+    //     this.getVeiculos()
+    // }
 
     getVeiculos():void{
         this.veiculoService.getVeiculos().subscribe(veiculos => (this.veiculos = veiculos))
